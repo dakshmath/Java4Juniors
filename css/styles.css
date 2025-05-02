@@ -129,17 +129,20 @@ nav ul li.active a::after {
 
 .hero .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
+    text-align: center;
+    gap: 30px;
 }
 
 .hero-content {
-    flex: 1;
+    width: 100%;
+    max-width: 800px;
 }
 
 .hero-image {
-    flex: 1;
-    text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 .hero h1 {
@@ -151,12 +154,15 @@ nav ul li.active a::after {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    max-width: 500px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
     color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-buttons {
     display: flex;
+    justify-content: center;
     gap: 15px;
 }
 
@@ -170,7 +176,7 @@ nav ul li.active a::after {
 }
 
 .btn-primary {
-    background-color: var(--white);
+    background-color: var(--light);
     color: var(--primary);
 }
 
@@ -246,35 +252,54 @@ nav ul li.active a::after {
     color: var(--secondary);
 }
 
-/* Program Highlight */
+/* Program Highlight*/
 .program-highlight {
-    padding: 80px 0;
-    background-color: var(--secondary);
-    color: var(--white);
-    text-align: center;
+    padding: 40px 0;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.program-highlight .container {
+    padding: 0;
+    max-width: 75%;
+    width: 75%;
 }
 
 .highlight-content {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 25px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
 }
 
 .program-highlight h2 {
-    color: var(--white);
-    margin-bottom: 20px;
+    color: var(--primary);
+    margin-bottom: -5px;
+    font-size: 1.8rem;
 }
 
 .program-details {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .program-details p {
-    margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+    color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    font-size: 1.1rem;
+}
+
+.program-details i {
+    color: var(--primary);
+    font-size: 1.2rem;
 }
 
 /* About Page Styles */
@@ -308,12 +333,12 @@ nav ul li.active a::after {
     background-color: var(--light);
 }
 
-.about-section.impact {
+.about-section.why-java {
     background-color: var(--white);
 }
 
 .section-content {
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
 }
@@ -334,8 +359,8 @@ nav ul li.active a::after {
 }
 
 .founder-card img {
-    width: 150px;
-    height: 150px;
+    width: 225px;
+    height: 225px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 20px;
@@ -352,28 +377,48 @@ nav ul li.active a::after {
     margin-bottom: 15px;
 }
 
-.impact-stats {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 50px;
+.java-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-.stat-item {
+.benefit-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.stat-item .number {
-    font-size: 2.5rem;
-    font-weight: 700;
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--white);
     color: var(--primary);
-    margin-bottom: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
 }
 
-.stat-item .label {
-    font-size: 1.1rem;
+.benefit-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.benefit-card p {
+    font-size: 1rem;
     color: var(--dark-gray);
+    line-height: 1.6;
 }
 
 /* Footer Styles */
@@ -530,7 +575,7 @@ footer {
 }
 
 .schedule-card {
-    background-color: var(--dark);
+    background-color: var(--light);
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     padding: 30px;
@@ -552,14 +597,14 @@ footer {
 }
 
 .schedule-item {
-    background-color: var(--dark);
+    background-color: var(--white);
     padding: 20px;
     border-radius: 5px;
-    color: var(--dark)
+    color: var(--white)
 }
 
 .schedule-item h3 {
-    color: var(--white);
+    color: var(--dark);
     margin-bottom: 10px;
 }
 
