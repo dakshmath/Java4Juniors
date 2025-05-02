@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities - Java4Juniors</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Java4Juniors Logo">
+                    <h1>Java4Juniors</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="overview.html">Program</a></li>
+                        <li class="active"><a href="opportunities.html">Opportunities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Join Our Program</h1>
+            <p>Opportunities for students and mentors</p>
+        </div>
+    </section>
+
+    <section class="opportunities">
+        <div class="container">
+            <div class="opportunity-card student-opportunity">
+                <div class="opportunity-content">
+                    <h2><i class="fas fa-user-graduate"></i> Student Applicants</h2>
+                    <h3>Requirements:</h3>
+                    <ul>
+                        <li>Must be a Middle School Student in HCPSS</li>
+                        <li>No prior programming experience required</li>
+                    </ul>
+                    <h3>Program Details:</h3>
+                    <ul>
+                        <li>5-week Java fundamentals program</li>
+                        <li>Taught by experienced high school students</li>
+                        <li>Virtual sessions on weekends</li>
+                    </ul>
+                    <p class="capacity"><strong>Student Capacity:</strong> 20 Students</p>
+                </div>
+                <div class="opportunity-form">
+                    <h3>Student Application</h3>
+                    <form id="studentForm">
+                        <div class="form-group">
+                            <label for="studentName">Full Name</label>
+                            <input type="text" id="studentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentEmail">Email</label>
+                            <input type="email" id="studentEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentSchool">School</label>
+                            <input type="text" id="studentSchool" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentGrade">Grade (Fall 2024)</label>
+                            <select id="studentGrade" required>
+                                <option value="">Select Grade</option>
+                                <option value="6">6th Grade</option>
+                                <option value="7">7th Grade</option>
+                                <option value="8">8th Grade</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="opportunity-card board-opportunity">
+                <div class="opportunity-content">
+                    <h2><i class="fas fa-chalkboard-teacher"></i> Board Member Applicants</h2>
+                    <h3>Requirements:</h3>
+                    <ul>
+                        <li>Must be a High School Student in HCPSS</li>
+                        <li>Strong Java programming skills</li>
+                        <li>Passion for teaching others</li>
+                    </ul>
+                    <h3>Responsibilities:</h3>
+                    <ul>
+                        <li>Teach weekend classes</li>
+                        <li>Create lesson materials</li>
+                        <li>Mentor students</li>
+                    </ul>
+                    <p class="capacity"><strong>Board Capacity:</strong> 4 Members</p>
+                </div>
+                <div class="opportunity-form">
+                    <h3>Board Application</h3>
+                    <form id="boardForm">
+                        <div class="form-group">
+                            <label for="boardName">Full Name</label>
+                            <input type="text" id="boardName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="boardEmail">Email</label>
+                            <input type="email" id="boardEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="boardSchool">School</label>
+                            <input type="text" id="boardSchool" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="boardExperience">Java Experience</label>
+                            <textarea id="boardExperience" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Java4Juniors Logo">
+                    <h3>Java4Juniors</h3>
+                    <p>Empowering young minds through coding education</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="overview.html">Program</a></li>
+                        <li><a href="opportunities.html">Apply</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> java4juniors@gmail.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Java4Juniors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
