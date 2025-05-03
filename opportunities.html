@@ -35,56 +35,55 @@
         </div>
     </section>
 
-    <section class="opportunities">
-        <div class="container">
-            <div class="opportunity-card student-opportunity">
-                <div class="opportunity-content">
-                    <h2><i class="fas fa-user-graduate"></i> Student Applicants</h2>
-                    <h3>Requirements:</h3>
-                    <ul>
-                        <li>Must be a Middle or High School Student in HCPSS</li>
-                        <li>No prior programming experience required</li>
-                    </ul>
-                    <h3>Program Details:</h3>
-                    <ul>
-                        <li>5-week Java fundamentals program</li>
-                        <li>Taught by experienced high school students</li>
-                        <li>Virtual sessions on weekends</li>
-                    </ul>
-                    <p class="capacity"><strong>Student Capacity:</strong> 20 Students</p>
-                </div>
-                <div class="opportunity-form">
-                    <h3>Student Application</h3>
-                    <form id="studentForm">
-                        <div class="form-group">
-                            <label for="studentName">Full Name</label>
-                            <input type="text" id="studentName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentEmail">Email</label>
-                            <input type="email" id="studentEmail" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentSchool">School</label>
-                            <input type="text" id="studentSchool" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentGrade">Grade (Fall 2025)</label>
-                            <select id="studentGrade" required>
-                                <option value="">Select Grade</option>
-                                <option value="6">6th Grade</option>
-                                <option value="7">7th Grade</option>
-                                <option value="8">8th Grade</option>
-                                <option value="9">9th Grade</option>
-                                <option value="10">10th Grade</option>
-                                <option value="11">11th Grade</option>
-                                <option value="12">12th Grade</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
-                    </form>
-                </div>
+    <div class="container">
+        <div class="opportunity-card student-opportunity">
+            <div class="opportunity-content">
+                <h2><i class="fas fa-user-graduate"></i> Student Applicants</h2>
+                <h3>Requirements:</h3>
+                <ul>
+                    <li>Must be a Middle or High School Student in HCPSS</li>
+                    <li>No prior programming experience required</li>
+                </ul>
+                <h3>Program Details:</h3>
+                <ul>
+                    <li>5-week Java fundamentals program</li>
+                    <li>Taught by experienced high school students</li>
+                    <li>Virtual sessions on weekends</li>
+                </ul>
+                <p class="capacity"><strong>Student Capacity:</strong> 20 Students</p>
             </div>
+            <div class="opportunity-form">
+                <h3>Student Application</h3>
+                <form action="https://formsubmit.co/b78781ab3d3572c9fff8ea56d828146f" method="POST" id="studentForm">
+                    <div class="form-group">
+                        <label for="studentName">Full Name</label>
+                        <input type="text" id="studentName" name="Student Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentEmail">Email</label>
+                        <input type="email" id="studentEmail" name="Email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentSchool">School</label>
+                        <input type="text" id="studentSchool" name="School" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentGrade">Grade (Fall 2025)</label>
+                        <select id="studentGrade" name="Grade" class="form-select" required>
+                            <option value="">Select Grade</option>
+                            <option value="6">6th Grade</option>
+                            <option value="7">7th Grade</option>
+                            <option value="8">8th Grade</option>
+                            <option value="9">9th Grade</option>
+                            <option value="10">10th Grade</option>
+                            <option value="11">11th Grade</option>
+                            <option value="12">12th Grade</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
+            </div>
+        </div>
 
             <div class="opportunity-card board-opportunity">
                 <div class="opportunity-content">
@@ -111,22 +110,22 @@
                 </div>
                 <div class="opportunity-form">
                     <h3>Board Application</h3>
-                    <form id="boardForm">
+                    <form action="https://formsubmit.co/b78781ab3d3572c9fff8ea56d828146f" method="POST" id="boardForm">
                         <div class="form-group">
                             <label for="boardName">Full Name</label>
-                            <input type="text" id="boardName" required>
+                            <input type="text" id="boardName" name="Board Member Name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="boardEmail">Email</label>
-                            <input type="email" id="boardEmail" required>
+                            <input type="email" id="boardEmail" name="Email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="boardSchool">School</label>
-                            <input type="text" id="boardSchool" required>
+                            <input type="text" id="boardSchool" name="School" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="boardExperience">Java Experience</label>
-                            <textarea id="boardExperience" required></textarea>
+                            <textarea id="boardExperience" name="Experience" class="form-control" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit Application</button>
                     </form>
@@ -156,8 +155,9 @@
                     <h4>Contact Us</h4>
                     <p><i class="fas fa-envelope"></i> java4juniors@gmail.com</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/java4juniors/?igsh=MW44d2Noa3Z1dXp4eA%3D%3D&utm_source=qr#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=java4juniors@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/company/java4juniors/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>

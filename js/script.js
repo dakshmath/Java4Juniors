@@ -9,33 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Form submissions
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
-    }
-
-    const studentForm = document.getElementById('studentForm');
-    if (studentForm) {
-        studentForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your student application! We will review it and contact you soon.');
-            studentForm.reset();
-        });
-    }
-
-    const boardForm = document.getElementById('boardForm');
-    if (boardForm) {
-        boardForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your board member application! We will contact you for next steps.');
-            boardForm.reset();
-        });
-    }
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
