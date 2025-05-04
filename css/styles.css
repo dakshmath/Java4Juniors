@@ -269,7 +269,7 @@ nav ul li.active a::after {
 .highlight-content {
     width: 100%;
     text-align: center;
-    padding: 25px 20px;
+    padding: 25px 30px;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
@@ -301,6 +301,35 @@ nav ul li.active a::after {
 .program-details i {
     color: var(--primary);
     font-size: 1.2rem;
+}
+
+.highlight-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increase the gap between buttons */
+    margin-top: 20px; /* Add some space above the buttons */
+}
+
+.highlight-buttons .btn {
+    min-width: 150px; /* Ensure buttons have minimum width */
+}
+
+@media (max-width: 768px) {
+    .highlight-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .highlight-buttons .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .program-highlight .container {
+        max-width: 90%;
+        width: 90%;
+    }
 }
 
 /* About Page Styles */
@@ -793,53 +822,84 @@ footer {
     cursor: pointer;
     margin-left: auto;
 }
-
-/* Responsive Header */
-@media (max-width: 768px) {
-    .header-content {
-        position: relative;
-        padding: 15px 0;
+    
+    @media (max-width: 768px) {
+        .header-content {
+            position: relative;
+            padding: 15px 0;
+        }
+        
+        .mobile-menu-toggle {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        nav {
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white);
+            z-index: 100;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav.active {
+            max-height: none; /* Remove height restriction */
+        }
+        
+        nav ul {
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+        }
+        
+        nav ul li {
+            width: 100%;
+            text-align: center;
+            padding: 25px 0; /* Reduce padding to fit more items */
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        nav ul li:last-child {
+            border-bottom: none;
+        }
     }
     
-    .mobile-menu-toggle {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+    @media (max-width: 768px) {
+        /* Adjustments for contact page layout */
+        .contact-section {
+            padding: 40px 0;
+        }
+        
+        .contact-form, .contact-info {
+            padding: 20px;
+        }
+        
+        .contact-form {
+            height: auto; /* Remove fixed height to allow content to determine height */
+        }
+        
+        /* Ensure map is responsive */
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+        }
+        
+        /* Adjust spacing for better mobile display */
+        .contact-methods {
+            margin: 20px 0;
+        }
+        
+        /* Make the social links centered on mobile */
+        .social-links {
+            justify-content: center;
+            margin-top: 20px;
+        }
     }
-    
-    nav {
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: var(--white);
-        z-index: 100;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-    
-    nav.active {
-        max-height: 300px;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-    
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        padding: 15px 0;
-        border-bottom: 1px solid var(--light-gray);
-    }
-    
-    nav ul li:last-child {
-        border-bottom: none;
-    }
-}
