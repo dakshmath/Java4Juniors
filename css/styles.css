@@ -68,6 +68,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -782,5 +783,63 @@ footer {
     
     .schedule-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .header-content {
+        position: relative;
+        padding: 15px 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--white);
+        z-index: 100;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    nav.active {
+        max-height: 300px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
     }
 }
